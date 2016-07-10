@@ -2,18 +2,18 @@
 #include<conio.h>
 void main()
 {
-int a,n,i,j,c=0;
+int a,p,i,j,count=0;
 clrscr();
-printf("\n Enter the number of students in the kidsgarden:");
+printf("\n Enter the snumber of students:");
 scanf("%d",&a);
-n=2*a;
-for(i=0;i<n;i++)
+p=2*a;
+for(i=0;i<p;i++)
 {
-for(j=i+1;j<=n;j++)
+for(j=i+1;j<=p;j++)
  {
- printf("\n%d\t%d\t\n",i,j);
- c++;
+ printf("\n%d\t%d\n",i,j);
+ count++;
  }  }
- printf("the daily walk combination no pair is same  is %d",c);
+ printf("the daily walk combination is %d",count);
  getch();
 }
