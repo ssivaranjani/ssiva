@@ -1,22 +1,26 @@
-#include<stdio.h>
-#include<conio.h>
-int main()
+#include <stdio.h>
+#include <conio.h>
+void hanoi1(char,char,char,int);
+void main()
 {
-int n;
-char sr='a',temp='b',desc='c';
-printf("enter no of disc");
-scanf("%d",&n);
-toh(n,sr,temp,desc);
-return 0;
+int a;
+clrscr();
+printf(" Enter the num of disk: ");
+scanf("%d",&a);
+printf("\n tower of honai %d number of disk : ", a);
+hanoi1('A','B','C', a);
+getch();
 }
-int toh(int jn,char sr,char t,char d)
+void hanoi1(char from,char to,char other,int b)
 {
-if(jn==0)
+if(b<=0)
+printf("\n Enter a valid disk");
+if(b==1)
+printf("\n Move disk from %c to %c",from,other);
+if(b>1)
 {
-printf("\n the %d disk moved from %c-->%c",jn,sr,d);
-return 0;
+hanoi1(from,other,to,b-1);
+hanoi1(from,to,other,1);
+hanoi1(to,from,other,b-1);
 }
-toh(jn-1,sr,d,t);
-printf("\n the %d disk moved from %c-->%c",jn,sr,d);
-toh(jn-1,t,sr,d);
-}
+  }
