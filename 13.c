@@ -3,12 +3,12 @@
 void hanoi1(char,char,char,int);
 void main()
 {
-int a;
+int n;
 clrscr();
 printf(" Enter the num of disk: ");
-scanf("%d",&a);
-printf("\n tower of honai %d number of disk : ", a);
-hanoi1('A','B','C', a);
+scanf("%d",&n);
+printf("\n tower of honai %d number of disk : ", n);
+hanoi1('A','B','C', n);
 getch();
 }
 void hanoi1(char from,char to,char other,int b)
